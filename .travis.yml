@@ -1,0 +1,18 @@
+language: go
+
+go:
+  - 1.11.x
+  - 1.12.x
+  - master
+
+matrix:
+  allow_failures:
+    - go: master
+
+before_install:
+  - go get golang.org/x/lint/golint
+
+script:
+  - gofmt -w . && git diff --exit-code go-ipmitool.go
+  - go vet ./...
+  - golint -set_exit_status $(go list ./...)

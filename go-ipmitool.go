@@ -7,7 +7,7 @@ import (
 	"os/exec"
 )
 
-// IPMIServer communicates with an IPMI Server and execute operation on it.
+// IPMIServer Communicates with an IPMI server and executes operations trough it.
 type IPMIServer struct {
 	Address  string
 	User     string

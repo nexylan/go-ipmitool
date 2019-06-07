@@ -2,9 +2,11 @@
 
 [![Build Status](https://travis-ci.org/nexylan/go-ipmitool.svg?branch=master)](https://travis-ci.org/nexylan/go-ipmitool)
 
-This wrapper permit to run `ipmitool` binary
+`ipmitool` binary wrapper.
 
-## IPMITool installation
+## Installation
+
+### Requirements
 
 To use `go-ipmitool` on your project you must have the binary present on your system. 
 

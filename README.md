@@ -20,6 +20,7 @@ Below is the different way to install it depending on your Linux Distribution
 ## Example
 
 ### Code:
+
 ```go
 package main
 

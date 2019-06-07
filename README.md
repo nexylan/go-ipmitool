@@ -1,5 +1,7 @@
 # go-ipmitool
 
+[![Build Status](https://travis-ci.org/nexylan/go-ipmitool.svg?branch=master)](https://travis-ci.org/nexylan/go-ipmitool)
+
 This wrapper permit to run `ipmitool` binary
 
 

@@ -1,4 +1,4 @@
-package go_ipmitool
+package goipmitool
 
 import (
 	"bytes"
@@ -7,27 +7,29 @@ import (
 	"os/exec"
 )
 
+// IPMIServer type
 type IPMIServer struct {
-	Address string
-	User string
+	Address  string
+	User     string
 	Password string
 }
 
 func init() {
-	_ , err := exec.LookPath("ipmitool")
+	_, err := exec.LookPath("ipmitool")
 	if err != nil {
 		log.Fatal("You must install ipmitool before use this package")
 	}
 }
 
-func (server IPMIServer) Query(command ...string) (bytes.Buffer, error){
+// Query to IPMI server
+func (server IPMIServer) Query(command ...string) (bytes.Buffer, error) {
 	cmd := exec.Command(
 		"ipmitool",
 		"-I", "lan",
 		"-H", server.Address,
 		"-U", server.User,
 		"-P", server.Password,
-		)
+	)
 
 	cmd.Args = append(cmd.Args, command...)
 

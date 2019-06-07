@@ -4,7 +4,6 @@
 
 This wrapper permit to run `ipmitool` binary
 
-
 ## IPMITool installation
 
 To use `go-ipmitool` on your project you must have the binary present on your system. 
@@ -51,6 +50,7 @@ func main() {
 ```
 
 ### Result: 
+
 ```bash
 2019/06/07 10:17:43 We are about to restart IPMI with this awesome package !
 2019/06/07 10:17:43 result Chassis Power Control: Reset

@@ -37,7 +37,7 @@ func (server IPMIServer) Query(command ...string) (bytes.Buffer, error) {
 	cmd.Stdout = &out
 
 	if err := cmd.Run(); err != nil {
-		return bytes.Buffer{}, errors.New("impossible to perform IPMI command")
+		return out, errors.New("impossible to perform IPMI command")
 	}
 
 	return out, nil

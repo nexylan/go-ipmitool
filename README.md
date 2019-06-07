@@ -45,7 +45,6 @@ func main() {
 
 	log.Printf("result %s", out.String())
 }
-
 ```
 
 ### Result: 

@@ -29,7 +29,6 @@ import (
 	"gopkg.in/nexylan/go-ipmitool.v0"
 )
 
-
 func main() {
 	log.Printf("We are about to restart IPMI with this awesome package !")
 

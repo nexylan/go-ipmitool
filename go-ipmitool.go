@@ -20,14 +20,16 @@ func init() {
 	}
 }
 
-func Query(server IPMIServer, command string) (bytes.Buffer, error){
+func (server IPMIServer) Query(command ...string) (bytes.Buffer, error){
 	cmd := exec.Command(
 		"ipmitool",
 		"-I", "lan",
 		"-H", server.Address,
 		"-U", server.User,
 		"-P", server.Password,
-		"chassis", "power", "reset")
+		)
+
+	cmd.Args = append(cmd.Args, command...)
 
 	var out bytes.Buffer
 	cmd.Stdout = &out

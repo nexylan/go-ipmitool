@@ -5,6 +5,7 @@ import (
 	"errors"
 	"log"
 	"os/exec"
+	"strings"
 )
 
 // IPMIServer Communicates with an IPMI server and executes operations trough it.
@@ -41,4 +42,21 @@ func (server IPMIServer) Query(command ...string) (bytes.Buffer, error) {
 	}
 
 	return out, nil
+}
+
+// GetChassisPowerStatus return a boolean for the power status
+func (server IPMIServer) GetChassisPowerStatus() (bool, error) {
+	out, err := server.Query("chassis", "power", "status")
+
+	if err != nil {
+		return false, err
+	}
+
+	status := false
+
+	if strings.Contains(out.String(), "on") {
+		status = true
+	}
+
+	return status, nil
 }

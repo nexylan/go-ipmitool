@@ -1,0 +1,21 @@
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go: [ '1.12', '1.13' ]
+    name: Go ${{ matrix.go }} lint
+    steps:
+      - uses: actions/checkout@master
+      - name: Setup go
+        uses: actions/setup-go@v1
+        with:
+          go-version: ${{ matrix.go }}
+      - name: Setup golint
+        run: go get -u golang.org/x/lint/golint
+      - name: Lint
+        run: |
+          gofmt -w . && git diff --exit-code go-ipmitool.go
+          go vet ./...
+          golint -set_exit_status $(go list ./...)

@@ -1,22 +1,20 @@
 # go-ipmitool
 
-[![Build Status](https://travis-ci.org/nexylan/go-ipmitool.svg?branch=master)](https://travis-ci.org/nexylan/go-ipmitool)
-
 `ipmitool` binary wrapper.
 
 ## Installation
 
 ### Requirements
 
-To use `go-ipmitool` on your project you must have the binary present on your system. 
+To use `go-ipmitool` on your project you must have the binary present on your system.
 
 Below is the different way to install it depending on your Linux Distribution
 
-|Package manager|Package Name|
-|:-------------:|:----------:|
-|      APT      |  ipmitool  |
-|      Yum      |  ipmitool  |
-|      APK      |  ipmitool  |
+| Package manager | Package Name |
+| :-------------: | :----------: |
+|       APT       |   ipmitool   |
+|       Yum       |   ipmitool   |
+|       APK       |   ipmitool   |
 
 ## Example
 
@@ -28,7 +26,7 @@ package main
 import (
 	"log"
 
-	"gopkg.in/nexylan/go-ipmitool.v0"
+	"github.com/nexylan/go-ipmitool"
 )
 
 func main() {
@@ -49,7 +47,7 @@ func main() {
 }
 ```
 
-### Result: 
+### Result:
 
 ```bash
 2019/06/07 10:17:43 We are about to restart IPMI with this awesome package !

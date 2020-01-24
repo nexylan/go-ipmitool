@@ -1,0 +1,24 @@
+# AUTO-GENERATED FILE
+# DO NOT EDIT
+# Source: https://gitlab.com/nexylan/skel/blob/master/rootfs/project/CODEOWNERS
+
+# Fallback rule. Should not be updated.
+* @soullivaneuh @Byidi @gallart
+
+# Languages
+*.go @soullivaneuh @henri9813 @gallart
+*.js @soullivaneuh @Byidi
+*.php @soullivaneuh @Byidi
+*.pp @noe.feutry @Maverick59 @gallart
+*.rb @soullivaneuh
+*.sh @noe.feutry @Maverick59 @kderoch @vincent.maldonado @gallart @soullivaneuh @Byidi
+*.ts @soullivaneuh @Byidi
+*.md @soullivaneuh
+
+# CI configuration
+.gitlab-ci.yml @soullivaneuh @Byidi @henri9813
+
+# Docker
+Dockerfile @soullivaneuh @Byidi @vincent.maldonado
+*.dockerfile @soullivaneuh @Byidi @vincent.maldonado
+docker-compose* @soullivaneuh @Byidi @vincent.maldonado

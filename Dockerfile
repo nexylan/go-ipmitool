@@ -1,6 +1,6 @@
 FROM golang:1-alpine
-ADD . /code
+COPY . /code
 
 WORKDIR /code
 
-RUN apk add ipmitool~=1 make~=4
+RUN apk add --no-cache ipmitool~=1 make~=4

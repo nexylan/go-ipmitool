@@ -1,16 +1,1 @@
 include: { project: nexylan/ci, ref: v2.5.0, file: auto.gitlab-ci.yml }
-
-variables:
-  NEXY_CI_MODE: none
-
-test:
-  stage: test
-  image: golang:alpine
-  before_script:
-    - apk add ipmitool make
-  script:
-    - make test
-  only:
-    refs:
-      - merge_requests
-      - master

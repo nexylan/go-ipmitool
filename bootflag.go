@@ -16,24 +16,22 @@ const (
 	BootFlagPXE   string = "force_pxe"
 )
 
-func retrieveBootFlagAssociation(bootflag string) (string, error) {
-	if strings.Contains(bootflag, "BIOS") {
-		return BootFlagBIOS, nil
-	}
-	if strings.Contains(bootflag, "CD/DVD") {
-		return BootFlagCdrom, nil
-	}
-	if strings.Contains(bootflag, "Hard-Drive") {
-		return BootFlagDisk, nil
-	}
-	if strings.Contains(bootflag, "No override") {
-		return BootFlagNone, nil
-	}
-	if strings.Contains(bootflag, "PXE") {
-		return BootFlagPXE, nil
+func retrieveBootFlagAssociation(bootFlag string) (string, error) {
+	bootFlags := map[string]string{
+		"BIOS":        BootFlagBIOS,
+		"CD/DVD":      BootFlagCdrom,
+		"Hard-Drive":  BootFlagDisk,
+		"No override": BootFlagNone,
+		"PXE":         BootFlagPXE,
 	}
 
-	return "", fmt.Errorf("unknown bootflag: '%s'", bootflag)
+	for search, value := range bootFlags {
+		if strings.Contains(bootFlag, search) {
+			return value, nil
+		}
+	}
+
+	return "", fmt.Errorf("unknown bootFlag: '%s'", bootFlag)
 }
 
 //SetBootFlag set a bootflag

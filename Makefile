@@ -1,2 +1,2 @@
 test:
-	go test -coverprofile=cover.out	go-ipmitool
+	go test -coverprofile=cover.out	github.com/nexylan/go-ipmitool

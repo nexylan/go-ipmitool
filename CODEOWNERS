@@ -7,18 +7,26 @@
 
 # Languages
 *.go @soullivaneuh @henri9813 @gallart
-*.js @soullivaneuh @Byidi
-*.php @soullivaneuh @Byidi
-*.pp @noe.feutry @Maverick59 @gallart
-*.rb @soullivaneuh
-*.sh @noe.feutry @Maverick59 @kderoch @vincent.maldonado @gallart @soullivaneuh @Byidi
-*.ts @soullivaneuh @Byidi
+*.js @soullivaneuh @Byidi @henri9813
 *.md @soullivaneuh
+*.php @soullivaneuh @Byidi @henri9813
+*.pp @noe.feutry @Maverick59 @gallart @henri9813
+*.rb @soullivaneuh @henri9813
+*.sh @noe.feutry @Maverick59 @kderoch @vincent.maldonado @gallart @soullivaneuh @Byidi
+*.svelte @soullivaneuh @Byidi @henri9813
+*.ts @soullivaneuh @Byidi @henri9813
+*.vue @soullivaneuh @Byidi @henri9813
 
 # CI configuration
 .gitlab-ci.yml @soullivaneuh @Byidi @henri9813
+*.gitlab-ci.yml @soullivaneuh @Byidi @henri9813
 
 # Docker
-Dockerfile @soullivaneuh @Byidi @vincent.maldonado
-*.dockerfile @soullivaneuh @Byidi @vincent.maldonado
-docker-compose* @soullivaneuh @Byidi @vincent.maldonado
+Dockerfile @soullivaneuh @Byidi @vincent.maldonado @henri9813
+*.dockerfile @soullivaneuh @Byidi @vincent.maldonado @henri9813
+docker-compose* @soullivaneuh @Byidi @vincent.maldonado @henri9813
+stack.yml @soullivaneuh @Byidi @vincent.maldonado @henri9813
+
+# Node projects
+package*.json @soullivaneuh @Byidi @henri9813
+yarn.lock @soullivaneuh @Byidi @henri9813

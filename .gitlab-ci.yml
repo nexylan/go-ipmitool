@@ -1,1 +1,6 @@
 include: { project: nexylan/ci, ref: v2.6.2, file: auto.gitlab-ci.yml }
+
+.deactivate: &deactivate
+  only: []
+
+dependency_scanning: *deactivate

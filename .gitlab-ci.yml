@@ -1,1 +1,1 @@
-include: { project: nexylan/ci, ref: v2.6.1, file: auto.gitlab-ci.yml }
+include: { project: nexylan/ci, ref: v2.6.2, file: auto.gitlab-ci.yml }
